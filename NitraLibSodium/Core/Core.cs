@@ -9,17 +9,17 @@ namespace NitraLibSodium.Core
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_init")]
             internal static extern int SodiumInit();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_set_misuse_handler")]
             internal static extern int SodiumSetMisuseHandler(global::System.IntPtr handler);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_misuse")]
             internal static extern void SodiumMisuse();
         }

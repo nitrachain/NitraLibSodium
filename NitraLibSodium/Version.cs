@@ -9,22 +9,22 @@ namespace NitraLibSodium
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_version_string")]
             internal static extern global::System.IntPtr SodiumVersionString();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_library_version_major")]
             internal static extern int SodiumLibraryVersionMajor();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_library_version_minor")]
             internal static extern int SodiumLibraryVersionMinor();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "sodium_library_minimal")]
             internal static extern int SodiumLibraryMinimal();
         }

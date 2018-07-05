@@ -16,7 +16,7 @@ namespace NitraLibSodium.Auth
             internal global::NitraLibSodium.Hash.Sha512State.__Internal octx;
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "??0crypto_auth_hmacsha512_state@@QEAA@AEBU0@@Z")]
             internal static extern global::System.IntPtr cctor(global::System.IntPtr instance, global::System.IntPtr _0);
         }

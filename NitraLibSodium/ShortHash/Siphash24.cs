@@ -9,32 +9,32 @@ namespace NitraLibSodium.ShortHash
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphash24_bytes")]
             internal static extern ulong Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphash24_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphash24")]
             internal static extern int Siphash24(byte* @out, byte* @in, ulong inlen, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphashx24_bytes")]
             internal static extern ulong X24Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphashx24_keybytes")]
             internal static extern ulong X24Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_shorthash_siphashx24")]
             internal static extern int SiphashX24(byte* @out, byte* @in, ulong inlen, byte* k);
         }
@@ -51,9 +51,9 @@ namespace NitraLibSodium.ShortHash
             return __ret;
         }
 
-        public static int CryptoSiphash24(byte* @out, byte* @in, ulong inlen, byte* k)
+        public static int CryptoSiphash24(byte[] @out, byte[] @in, ulong inlen, byte[] k)
         {
-            var __ret = __Internal.Siphash24(@out, @in, inlen, k);
+            var __ret = __Internal.Siphash24(MarshalHelper.ByteArrayToIntPtr(@out), MarshalHelper.ByteArrayToIntPtr(@in), inlen, MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
@@ -69,9 +69,9 @@ namespace NitraLibSodium.ShortHash
             return __ret;
         }
 
-        public static int SiphashX24(byte* @out, byte* @in, ulong inlen, byte* k)
+        public static int SiphashX24(byte[] @out, byte[] @in, ulong inlen, byte[] k)
         {
-            var __ret = __Internal.SiphashX24(@out, @in, inlen, k);
+            var __ret = __Internal.SiphashX24(MarshalHelper.ByteArrayToIntPtr(@out), MarshalHelper.ByteArrayToIntPtr(@in), inlen, MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
     }

@@ -9,32 +9,32 @@ namespace NitraLibSodium.Core
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_bytes")]
             internal static extern ulong Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_uniformbytes")]
             internal static extern ulong Uniformbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_is_valid_point")]
             internal static extern int IsValidPoint(byte* p);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_add")]
             internal static extern int Add(byte* r, byte* p, byte* q);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_sub")]
             internal static extern int Sub(byte* r, byte* p, byte* q);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_ed25519_from_uniform")]
             internal static extern int FromUniform(byte* p, byte* r);
         }
@@ -51,27 +51,27 @@ namespace NitraLibSodium.Core
             return __ret;
         }
 
-        public static int IsValidPoint(byte* p)
+        public static int IsValidPoint(byte[] p)
         {
-            var __ret = __Internal.IsValidPoint(p);
+            var __ret = __Internal.IsValidPoint(MarshalHelper.ByteArrayToIntPtr(p));
             return __ret;
         }
 
-        public static int Add(byte* r, byte* p, byte* q)
+        public static int Add(byte[] r, byte[] p, byte[] q)
         {
-            var __ret = __Internal.Add(r, p, q);
+            var __ret = __Internal.Add(MarshalHelper.ByteArrayToIntPtr(r), MarshalHelper.ByteArrayToIntPtr(p), MarshalHelper.ByteArrayToIntPtr(q));
             return __ret;
         }
 
-        public static int Sub(byte* r, byte* p, byte* q)
+        public static int Sub(byte[] r, byte[] p, byte[] q)
         {
-            var __ret = __Internal.Sub(r, p, q);
+            var __ret = __Internal.Sub(MarshalHelper.ByteArrayToIntPtr(r), MarshalHelper.ByteArrayToIntPtr(p), MarshalHelper.ByteArrayToIntPtr(q));
             return __ret;
         }
 
-        public static int FromUniform(byte* p, byte* r)
+        public static int FromUniform(byte[] p, byte[] r)
         {
-            var __ret = __Internal.FromUniform(p, r);
+            var __ret = __Internal.FromUniform(MarshalHelper.ByteArrayToIntPtr(p), MarshalHelper.ByteArrayToIntPtr(r));
             return __ret;
         }
     }

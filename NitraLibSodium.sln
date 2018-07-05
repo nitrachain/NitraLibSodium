@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NitraLibSodium", "NitraLibSodium\NitraLibSodium.csproj", "{AA1A7EA6-2C3A-4727-8C4B-49155DFBB016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NitraLibSodium", "NitraLibSodium\NitraLibSodium.csproj", "{AA1A7EA6-2C3A-4727-8C4B-49155DFBB016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibSodiumWrapper", "DemoLibSodiumWrapper\DemoLibSodiumWrapper.csproj", "{8D7923CA-0D7F-436B-827C-761B8ED22BDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AA1A7EA6-2C3A-4727-8C4B-49155DFBB016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA1A7EA6-2C3A-4727-8C4B-49155DFBB016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA1A7EA6-2C3A-4727-8C4B-49155DFBB016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7923CA-0D7F-436B-827C-761B8ED22BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7923CA-0D7F-436B-827C-761B8ED22BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7923CA-0D7F-436B-827C-761B8ED22BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7923CA-0D7F-436B-827C-761B8ED22BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

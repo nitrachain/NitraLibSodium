@@ -9,72 +9,72 @@ namespace NitraLibSodium.Stream
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_noncebytes")]
             internal static extern ulong Noncebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_messagebytes_max")]
             internal static extern ulong MessagebytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20")]
             internal static extern int Chacha20(byte* c, ulong clen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_xor")]
             internal static extern int Xor(byte* c, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_xor_ic")]
             internal static extern int XorIc(byte* c, byte* m, ulong mlen, byte* n, ulong ic, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_keygen")]
             internal static extern void Keygen(byte[] k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_keybytes")]
             internal static extern ulong IetfKeybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_noncebytes")]
             internal static extern ulong IetfNoncebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_messagebytes_max")]
             internal static extern ulong IetfMessagebytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf")]
             internal static extern int Ietf(byte* c, ulong clen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_xor")]
             internal static extern int IetfXor(byte* c, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_xor_ic")]
             internal static extern int IetfXorIc(byte* c, byte* m, ulong mlen, byte* n, uint ic, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_chacha20_ietf_keygen")]
             internal static extern void IetfKeygen(byte[] k);
         }
@@ -97,21 +97,21 @@ namespace NitraLibSodium.Stream
             return __ret;
         }
 
-        public static int CryptoChacha20(byte* c, ulong clen, byte* n, byte* k)
+        public static int CryptoChacha20(byte[] c, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Chacha20(c, clen, n, k);
+            var __ret = __Internal.Chacha20(MarshalHelper.ByteArrayToIntPtr(c), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int Xor(byte* c, byte* m, ulong mlen, byte* n, byte* k)
+        public static int Xor(byte[] c, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Xor(c, m, mlen, n, k);
+            var __ret = __Internal.Xor(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int XorIc(byte* c, byte* m, ulong mlen, byte* n, ulong ic, byte* k)
+        public static int XorIc(byte[] c, byte[] m, ulong mlen, byte[] n, ulong ic, byte[] k)
         {
-            var __ret = __Internal.XorIc(c, m, mlen, n, ic, k);
+            var __ret = __Internal.XorIc(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), ic, MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
@@ -140,21 +140,21 @@ namespace NitraLibSodium.Stream
             return __ret;
         }
 
-        public static int Ietf(byte* c, ulong clen, byte* n, byte* k)
+        public static int Ietf(byte[] c, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Ietf(c, clen, n, k);
+            var __ret = __Internal.Ietf(MarshalHelper.ByteArrayToIntPtr(c), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int IetfXor(byte* c, byte* m, ulong mlen, byte* n, byte* k)
+        public static int IetfXor(byte[] c, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.IetfXor(c, m, mlen, n, k);
+            var __ret = __Internal.IetfXor(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int IetfXorIc(byte* c, byte* m, ulong mlen, byte* n, uint ic, byte* k)
+        public static int IetfXorIc(byte[] c, byte[] m, ulong mlen, byte[] n, uint ic, byte[] k)
         {
-            var __ret = __Internal.IetfXorIc(c, m, mlen, n, ic, k);
+            var __ret = __Internal.IetfXorIc(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), ic, MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 

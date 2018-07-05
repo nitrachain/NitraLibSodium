@@ -9,27 +9,27 @@ namespace NitraLibSodium.Core
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_salsa208_outputbytes")]
             internal static extern ulong Outputbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_salsa208_inputbytes")]
             internal static extern ulong Inputbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_salsa208_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_salsa208_constbytes")]
             internal static extern ulong Constbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_core_salsa208")]
             internal static extern int Salsa208(byte* @out, byte* @in, byte* k, byte* c);
         }
@@ -58,9 +58,9 @@ namespace NitraLibSodium.Core
             return __ret;
         }
 
-        public static int CryptoSalsa208(byte* @out, byte* @in, byte* k, byte* c)
+        public static int CryptoSalsa208(byte[] @out, byte[] @in, byte[] k, byte[] c)
         {
-            var __ret = __Internal.Salsa208(@out, @in, k, c);
+            var __ret = __Internal.Salsa208(MarshalHelper.ByteArrayToIntPtr(@out), MarshalHelper.ByteArrayToIntPtr(@in), MarshalHelper.ByteArrayToIntPtr(k), MarshalHelper.ByteArrayToIntPtr(c));
             return __ret;
         }
     }

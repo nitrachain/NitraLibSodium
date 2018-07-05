@@ -9,72 +9,72 @@ namespace NitraLibSodium.SecretBox
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_noncebytes")]
             internal static extern ulong Noncebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_macbytes")]
             internal static extern ulong Macbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_primitive")]
             internal static extern global::System.IntPtr Primitive();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_messagebytes_max")]
             internal static extern ulong MessagebytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_easy")]
             internal static extern int Easy(byte* c, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_open_easy")]
             internal static extern int OpenEasy(byte* m, byte* c, ulong clen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_detached")]
             internal static extern int Detached(byte* c, byte* mac, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_open_detached")]
             internal static extern int OpenDetached(byte* m, byte* c, byte* mac, ulong clen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_keygen")]
             internal static extern void Keygen(byte[] k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_zerobytes")]
             internal static extern ulong Zerobytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_boxzerobytes")]
             internal static extern ulong Boxzerobytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox")]
             internal static extern int Secretbox(byte* c, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_secretbox_open")]
             internal static extern int Open(byte* m, byte* c, ulong clen, byte* n, byte* k);
         }
@@ -109,27 +109,27 @@ namespace NitraLibSodium.SecretBox
             return __ret;
         }
 
-        public static int Easy(byte* c, byte* m, ulong mlen, byte* n, byte* k)
+        public static int Easy(byte[] c, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Easy(c, m, mlen, n, k);
+            var __ret = __Internal.Easy(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int OpenEasy(byte* m, byte* c, ulong clen, byte* n, byte* k)
+        public static int OpenEasy(byte[] m, byte[] c, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.OpenEasy(m, c, clen, n, k);
+            var __ret = __Internal.OpenEasy(MarshalHelper.ByteArrayToIntPtr(m), MarshalHelper.ByteArrayToIntPtr(c), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int Detached(byte* c, byte* mac, byte* m, ulong mlen, byte* n, byte* k)
+        public static int Detached(byte[] c, byte[] mac, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Detached(c, mac, m, mlen, n, k);
+            var __ret = __Internal.Detached(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(mac), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int OpenDetached(byte* m, byte* c, byte* mac, ulong clen, byte* n, byte* k)
+        public static int OpenDetached(byte[] m, byte[] c, byte[] mac, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.OpenDetached(m, c, mac, clen, n, k);
+            var __ret = __Internal.OpenDetached(MarshalHelper.ByteArrayToIntPtr(m), MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(mac), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
@@ -152,15 +152,15 @@ namespace NitraLibSodium.SecretBox
             return __ret;
         }
 
-        public static int CryptoSecretbox(byte* c, byte* m, ulong mlen, byte* n, byte* k)
+        public static int CryptoSecretbox(byte[] c, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Secretbox(c, m, mlen, n, k);
+            var __ret = __Internal.Secretbox(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int Open(byte* m, byte* c, ulong clen, byte* n, byte* k)
+        public static int Open(byte[] m, byte[] c, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Open(m, c, clen, n, k);
+            var __ret = __Internal.Open(MarshalHelper.ByteArrayToIntPtr(m), MarshalHelper.ByteArrayToIntPtr(c), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
     }

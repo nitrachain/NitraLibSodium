@@ -9,82 +9,82 @@ namespace NitraLibSodium.GenericHash
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_bytes_min")]
             internal static extern ulong BytesMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_bytes_max")]
             internal static extern ulong BytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_bytes")]
             internal static extern ulong Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_keybytes_min")]
             internal static extern ulong KeybytesMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_keybytes_max")]
             internal static extern ulong KeybytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_saltbytes")]
             internal static extern ulong Saltbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_personalbytes")]
             internal static extern ulong Personalbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_statebytes")]
             internal static extern ulong Statebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b")]
             internal static extern int Blake2b(byte* @out, ulong outlen, byte* @in, ulong inlen, byte* key, ulong keylen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_salt_personal")]
             internal static extern int SaltPersonal(byte* @out, ulong outlen, byte* @in, ulong inlen, byte* key, ulong keylen, byte* salt, byte* personal);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_init")]
             internal static extern int Init(global::System.IntPtr state, byte* key, ulong keylen, ulong outlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_init_salt_personal")]
             internal static extern int InitSaltPersonal(global::System.IntPtr state, byte* key, ulong keylen, ulong outlen, byte* salt, byte* personal);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_update")]
             internal static extern int Update(global::System.IntPtr state, byte* @in, ulong inlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_final")]
             internal static extern int Final(global::System.IntPtr state, byte* @out, ulong outlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_generichash_blake2b_keygen")]
             internal static extern void Keygen(byte[] k);
         }
@@ -143,43 +143,43 @@ namespace NitraLibSodium.GenericHash
             return __ret;
         }
 
-        public static int CryptoBlake2b(byte* @out, ulong outlen, byte* @in, ulong inlen, byte* key, ulong keylen)
+        public static int CryptoBlake2b(byte[] @out, ulong outlen, byte[] @in, ulong inlen, byte[] key, ulong keylen)
         {
-            var __ret = __Internal.Blake2b(@out, outlen, @in, inlen, key, keylen);
+            var __ret = __Internal.Blake2b(MarshalHelper.ByteArrayToIntPtr(@out), outlen, MarshalHelper.ByteArrayToIntPtr(@in), inlen, MarshalHelper.ByteArrayToIntPtr(key), keylen);
             return __ret;
         }
 
-        public static int SaltPersonal(byte* @out, ulong outlen, byte* @in, ulong inlen, byte* key, ulong keylen, byte* salt, byte* personal)
+        public static int SaltPersonal(byte[] @out, ulong outlen, byte[] @in, ulong inlen, byte[] key, ulong keylen, byte[] salt, byte[] personal)
         {
-            var __ret = __Internal.SaltPersonal(@out, outlen, @in, inlen, key, keylen, salt, personal);
+            var __ret = __Internal.SaltPersonal(MarshalHelper.ByteArrayToIntPtr(@out), outlen, MarshalHelper.ByteArrayToIntPtr(@in), inlen, MarshalHelper.ByteArrayToIntPtr(key), keylen, MarshalHelper.ByteArrayToIntPtr(salt), MarshalHelper.ByteArrayToIntPtr(personal));
             return __ret;
         }
 
-        public static int Init(global::NitraLibSodium.GenericHash.Blake2bState state, byte* key, ulong keylen, ulong outlen)
+        public static int Init(global::NitraLibSodium.GenericHash.Blake2bState state, byte[] key, ulong keylen, ulong outlen)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.Init(__arg0, key, keylen, outlen);
+            var __ret = __Internal.Init(__arg0, MarshalHelper.ByteArrayToIntPtr(key), keylen, outlen);
             return __ret;
         }
 
-        public static int InitSaltPersonal(global::NitraLibSodium.GenericHash.Blake2bState state, byte* key, ulong keylen, ulong outlen, byte* salt, byte* personal)
+        public static int InitSaltPersonal(global::NitraLibSodium.GenericHash.Blake2bState state, byte[] key, ulong keylen, ulong outlen, byte[] salt, byte[] personal)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.InitSaltPersonal(__arg0, key, keylen, outlen, salt, personal);
+            var __ret = __Internal.InitSaltPersonal(__arg0, MarshalHelper.ByteArrayToIntPtr(key), keylen, outlen, MarshalHelper.ByteArrayToIntPtr(salt), MarshalHelper.ByteArrayToIntPtr(personal));
             return __ret;
         }
 
-        public static int Update(global::NitraLibSodium.GenericHash.Blake2bState state, byte* @in, ulong inlen)
+        public static int Update(global::NitraLibSodium.GenericHash.Blake2bState state, byte[] @in, ulong inlen)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.Update(__arg0, @in, inlen);
+            var __ret = __Internal.Update(__arg0, MarshalHelper.ByteArrayToIntPtr(@in), inlen);
             return __ret;
         }
 
-        public static int Final(global::NitraLibSodium.GenericHash.Blake2bState state, byte* @out, ulong outlen)
+        public static int Final(global::NitraLibSodium.GenericHash.Blake2bState state, byte[] @out, ulong outlen)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.Final(__arg0, @out, outlen);
+            var __ret = __Internal.Final(__arg0, MarshalHelper.ByteArrayToIntPtr(@out), outlen);
             return __ret;
         }
 

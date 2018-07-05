@@ -9,32 +9,32 @@ namespace NitraLibSodium.Stream
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208_keybytes")]
             internal static extern ulong Keybytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208_noncebytes")]
             internal static extern ulong Noncebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208_messagebytes_max")]
             internal static extern ulong MessagebytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208")]
             internal static extern int Salsa208(byte* c, ulong clen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208_xor")]
             internal static extern int Xor(byte* c, byte* m, ulong mlen, byte* n, byte* k);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_stream_salsa208_keygen")]
             internal static extern void Keygen(byte[] k);
         }
@@ -57,15 +57,15 @@ namespace NitraLibSodium.Stream
             return __ret;
         }
 
-        public static int CryptoSalsa208(byte* c, ulong clen, byte* n, byte* k)
+        public static int CryptoSalsa208(byte[] c, ulong clen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Salsa208(c, clen, n, k);
+            var __ret = __Internal.Salsa208(MarshalHelper.ByteArrayToIntPtr(c), clen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 
-        public static int Xor(byte* c, byte* m, ulong mlen, byte* n, byte* k)
+        public static int Xor(byte[] c, byte[] m, ulong mlen, byte[] n, byte[] k)
         {
-            var __ret = __Internal.Xor(c, m, mlen, n, k);
+            var __ret = __Internal.Xor(MarshalHelper.ByteArrayToIntPtr(c), MarshalHelper.ByteArrayToIntPtr(m), mlen, MarshalHelper.ByteArrayToIntPtr(n), MarshalHelper.ByteArrayToIntPtr(k));
             return __ret;
         }
 

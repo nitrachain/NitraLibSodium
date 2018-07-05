@@ -9,32 +9,32 @@ namespace NitraLibSodium.Hash
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512_statebytes")]
             internal static extern ulong Statebytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512_bytes")]
             internal static extern ulong Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512")]
             internal static extern int Sha512(byte* @out, byte* @in, ulong inlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512_init")]
             internal static extern int Init(global::System.IntPtr state);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512_update")]
             internal static extern int Update(global::System.IntPtr state, byte* @in, ulong inlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_sha512_final")]
             internal static extern int Final(global::System.IntPtr state, byte* @out);
         }
@@ -51,9 +51,9 @@ namespace NitraLibSodium.Hash
             return __ret;
         }
 
-        public static int CryptoSha512(byte* @out, byte* @in, ulong inlen)
+        public static int CryptoSha512(byte[] @out, byte[] @in, ulong inLength)
         {
-            var __ret = __Internal.Sha512(@out, @in, inlen);
+            var __ret = __Internal.Sha512(MarshalHelper.ByteArrayToIntPtr(@out), MarshalHelper.ByteArrayToIntPtr(@in), (ulong)@in.Length);
             return __ret;
         }
 
@@ -64,17 +64,22 @@ namespace NitraLibSodium.Hash
             return __ret;
         }
 
-        public static int Update(global::NitraLibSodium.Hash.Sha512State state, byte* @in, ulong inlen)
+        public static int Update(global::NitraLibSodium.Hash.Sha512State state, byte[] @in, ulong inlen)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.Update(__arg0, @in, inlen);
+            int __ret = __Internal.Update(__arg0, MarshalHelper.ByteArrayToIntPtr(@in), inlen);
             return __ret;
         }
 
-        public static int Final(global::NitraLibSodium.Hash.Sha512State state, byte* @out)
+        public static int Final(global::NitraLibSodium.Hash.Sha512State state, out byte[] @out)
         {
             var __arg0 = ReferenceEquals(state, null) ? global::System.IntPtr.Zero : state.__Instance;
-            var __ret = __Internal.Final(__arg0, @out);
+            int __ret;
+            fixed (byte* _out = @out)
+            {
+                __ret = __Internal.Final(__arg0, _out);
+                Marshal.Copy((IntPtr)_out, @out, 0, @out.Length);
+            }
             return __ret;
         }
     }

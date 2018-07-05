@@ -9,17 +9,17 @@ namespace NitraLibSodium.Hash
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_bytes")]
             internal static extern ulong Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash")]
             internal static extern int Hash(byte* @out, byte* @in, ulong inlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_hash_primitive")]
             internal static extern global::System.IntPtr Primitive();
         }
@@ -30,9 +30,9 @@ namespace NitraLibSodium.Hash
             return __ret;
         }
 
-        public static int CryptoHash(byte* @out, byte* @in, ulong inlen)
+        public static int CryptoHash(byte[] @out, byte[] @in, ulong inlen)
         {
-            var __ret = __Internal.Hash(@out, @in, inlen);
+            var __ret = __Internal.Hash(MarshalHelper.ByteArrayToIntPtr(@out), MarshalHelper.ByteArrayToIntPtr(@in), inlen);
             return __ret;
         }
 

@@ -9,102 +9,102 @@ namespace NitraLibSodium.PWHash
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_bytes_min")]
             internal static extern ulong BytesMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_bytes_max")]
             internal static extern ulong BytesMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_passwd_min")]
             internal static extern ulong PasswdMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_passwd_max")]
             internal static extern ulong PasswdMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_saltbytes")]
             internal static extern ulong Saltbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_strbytes")]
             internal static extern ulong Strbytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_strprefix")]
             internal static extern global::System.IntPtr Strprefix();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_opslimit_min")]
             internal static extern ulong OpslimitMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_opslimit_max")]
             internal static extern ulong OpslimitMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_memlimit_min")]
             internal static extern ulong MemlimitMin();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_memlimit_max")]
             internal static extern ulong MemlimitMax();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_opslimit_interactive")]
             internal static extern ulong OpslimitInteractive();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_memlimit_interactive")]
             internal static extern ulong MemlimitInteractive();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive")]
             internal static extern ulong OpslimitSensitive();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive")]
             internal static extern ulong MemlimitSensitive();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256")]
             internal static extern int Scryptsalsa208sha256(byte* @out, ulong outlen, [MarshalAs(UnmanagedType.LPStr)] string passwd, ulong passwdlen, byte* salt, ulong opslimit, ulong memlimit);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_str")]
             internal static extern int Str(sbyte[] @out, [MarshalAs(UnmanagedType.LPStr)] string passwd, ulong passwdlen, ulong opslimit, ulong memlimit);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_str_verify")]
             internal static extern int StrVerify(sbyte[] str, [MarshalAs(UnmanagedType.LPStr)] string passwd, ulong passwdlen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_ll")]
             internal static extern int Ll(byte* passwd, ulong passwdlen, byte* salt, ulong saltlen, ulong N, uint r, uint p, byte* buf, ulong buflen);
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_pwhash_scryptsalsa208sha256_str_needs_rehash")]
             internal static extern int StrNeedsRehash(sbyte[] str, ulong opslimit, ulong memlimit);
         }
@@ -199,9 +199,9 @@ namespace NitraLibSodium.PWHash
             return __ret;
         }
 
-        public static int CryptoScryptsalsa208sha256(byte* @out, ulong outlen, string passwd, ulong passwdlen, byte* salt, ulong opslimit, ulong memlimit)
+        public static int CryptoScryptsalsa208sha256(byte[] @out, ulong outlen, string passwd, ulong passwdlen, byte[] salt, ulong opslimit, ulong memlimit)
         {
-            var __ret = __Internal.Scryptsalsa208sha256(@out, outlen, passwd, passwdlen, salt, opslimit, memlimit);
+            var __ret = __Internal.Scryptsalsa208sha256(MarshalHelper.ByteArrayToIntPtr(@out), outlen, passwd, passwdlen, MarshalHelper.ByteArrayToIntPtr(salt), opslimit, memlimit);
             return __ret;
         }
 
@@ -221,9 +221,9 @@ namespace NitraLibSodium.PWHash
             return __ret;
         }
 
-        public static int Ll(byte* passwd, ulong passwdlen, byte* salt, ulong saltlen, ulong N, uint r, uint p, byte* buf, ulong buflen)
+        public static int Ll(byte* passwd, ulong passwdlen, byte[] salt, ulong saltlen, ulong N, uint r, uint p, byte[] buf, ulong buflen)
         {
-            var __ret = __Internal.Ll(passwd, passwdlen, salt, saltlen, N, r, p, buf, buflen);
+            var __ret = __Internal.Ll(passwd, passwdlen, MarshalHelper.ByteArrayToIntPtr(salt), saltlen, N, r, p, MarshalHelper.ByteArrayToIntPtr(buf), buflen);
             return __ret;
         }
 

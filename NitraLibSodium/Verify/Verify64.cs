@@ -9,12 +9,12 @@ namespace NitraLibSodium.Verify
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_verify_64_bytes")]
             internal static extern ulong Verify64Bytes();
 
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("NitraLibSodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
+            [DllImport("libsodium", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint = "crypto_verify_64")]
             internal static extern int Verify64(byte* x, byte* y);
         }
@@ -25,9 +25,9 @@ namespace NitraLibSodium.Verify
             return __ret;
         }
 
-        public static int CryptoVerify64(byte* x, byte* y)
+        public static int CryptoVerify64(byte[] x, byte[] y)
         {
-            var __ret = __Internal.Verify64(x, y);
+            var __ret = __Internal.Verify64(MarshalHelper.ByteArrayToIntPtr(x), MarshalHelper.ByteArrayToIntPtr(y));
             return __ret;
         }
     }

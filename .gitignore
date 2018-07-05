@@ -1,0 +1,14 @@
+
+.vs/NitraLibSodium/DesignTimeBuild/.dtbcache
+.vs/NitraLibSodium/v15/.suo
+.vs/NitraLibSodium/v15/Server/sqlite3/db.lock
+.vs/NitraLibSodium/v15/Server/sqlite3/storage.ide
+.vs/NitraLibSodium/v15/Server/sqlite3/storage.ide-shm
+.vs/NitraLibSodium/v15/Server/sqlite3/storage.ide-wal
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+/DemoLibSodiumWrapper/obj
+/DemoLibSodiumWrapper/bin/Debug/netcoreapp2.0
+/NitraLibSodium/bin/Debug/netcoreapp2.0
+/NitraLibSodium/obj
+/NitraLibSodium/NitraLibSodium.csproj.user
